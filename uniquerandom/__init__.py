@@ -1,1 +1,1 @@
-from .uniquerandom import uniquerandom
+from .uniquerandom import integer

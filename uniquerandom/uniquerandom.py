@@ -3,22 +3,20 @@ count = 0
 prev = 0
 
 
-def int():
-    randomnum = random.randint(1, 10)
+def integer(minimum, maximum):
+    randomnum = random.randint(minimum, maximum)
     global count
     global prev
     if count == 0:
         prev = randomnum
-        print(randomnum)
-        count = 1
+        count += 1
+        return randomnum
     else:
         if randomnum == prev:
-            uniquerandom()
+            integer(minimum, maximum)
         else:
-            print(randomnum)
             prev = randomnum
-
-uniquerandom()
+            return randomnum
 
 
 
